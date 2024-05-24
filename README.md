@@ -23,8 +23,8 @@ BrickSmasher is a Django-based movie rental management system designed to revive
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repository-name.git
-    cd your-repository-name
+    git clone https://github.com/dssushruth2000/BrickSmasher-Movie-Rental.git
+    cd BrickSmasher-Movie-Rental
     ```
 
 2. Create a virtual environment:
