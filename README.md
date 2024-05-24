@@ -106,5 +106,5 @@ The application provides the following functionalities:
 - **Checkout**: Represents a rental transaction linking a user and a movie.
 
 ## Contributing
-Contributions to the Elixir project are welcome. Please feel free to fork the repository and submit pull requests.
+Contributions to this project are welcome. Please feel free to fork the repository and submit pull requests.
 
