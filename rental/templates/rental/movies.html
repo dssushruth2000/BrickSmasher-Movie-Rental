@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'rental/css/styles.css' %}">
+
+    <title>Manage Movies</title>
+    <script>
+        const manageMoviesURL = "{% url 'manage_movies' %}";
+    </script>
+    <script src="{% static '/rental/js/movies.js' %}"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="{% url 'home' %}">Back to Home</a>
+        <h1>Manage Movies</h1>
+        
+        <label for="title">New Movie Title:</label>
+        <input type="text" id="title">
+        <button onclick="addNewMovie()">Add Movie</button>
+    
+        
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>In Stock</th>
+                    <th>Checked Out</th>
+                    <th>Add (+)</th>
+                    <th>Remove (-)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                <tr>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.in_stock }}</td>
+                    <td>{{ movie.checkout_set.count }}</td>
+                    <td><button onclick="manageMovies('add', {{ movie.id }})">+</button></td>
+                    <td><button onclick="manageMovies('remove', {{ movie.id }})">-</button></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p id="message"></p>
+        
+    </div>
+</body>
+</html>

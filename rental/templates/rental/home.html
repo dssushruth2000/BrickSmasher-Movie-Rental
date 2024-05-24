@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'rental/css/styles.css' %}">
+
+    <title>BrickSmasher Home</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>BrickSmasher</h1>
+        <ul>
+            <li><a href="{% url 'account_creation' %}">Create Account</a></li>
+            <li><a href="{% url 'manage_movies' %}">Manage Movies</a></li>
+            <li><a href="{% url 'rent_return_movies' %}">Rent/Return Movies</a></li>
+        </ul>
+    </div>
+</body>
+</html>

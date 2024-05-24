@@ -1,0 +1,160 @@
+body {
+    background-color: #f4f4f9;
+    font-family: 'Lato', sans-serif;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    color: #4e73df;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: #4e73df;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4e73df;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3b5cbc;
+}
+
+p#message {
+    color: #e74a3b;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#member-info {
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px 0;
+    font-size: 20px; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul li {
+    display: block; 
+    margin: 50px 0;  
+}
+
+
+ul li a {
+    display: inline-block; 
+    width: 180px;  
+    padding: 12px 0;  
+    background-color: #4e73df;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;  
+    text-decoration: none;  
+    box-sizing: border-box;  
+}
+
+ul li a:hover {
+    background-color: #3b5cbc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f8f9fc;
+    border: 1px solid #ced4da;
+}
+
+table th, table td {
+    border: 1px solid #ced4da;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+th {
+    background-color: #4e73df;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+}
+
+button.table-button {
+    padding: 8px 15px;
+    background-color: #4e73df;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button.table-button:hover {
+    background-color: #3b5cbc;
+}
+
+.error-message {
+    color: red;
+    text-align: center; 
+    margin-top: 10px; 
+}

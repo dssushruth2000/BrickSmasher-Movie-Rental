@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'rental/css/styles.css' %}">
+    <title>Rent/Return Movies</title>
+    <script>
+        const manageRentalsURL = "{% url 'manage_rentals' %}";
+    </script>
+    <script src="{% static 'rental/js/rent.js' %}"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="{% url 'home' %}">Back to Home</a>
+        <h1>Rent/Return Movies</h1>
+
+        
+        <label for="email">Member Email:</label>
+        <input type="email" id="email" required>
+        <button onclick="findMember()">Find Member</button>
+
+        
+        <div id="member-info">{{ member_info }}</div>
+
+        
+        <h3>Movies Checked Out</h3>
+        <table id="checked-out-table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rental in rentals %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ rental.movie.title }}</td>
+                    <td><button onclick="submitRental('return', {{ rental.user.id }}, {{ rental.movie.id }})">Return</button></td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">Please provide a member email to see checked-out movies.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="error-message"></div>
+
+        
+        <h3>All Movies In Stock</h3>
+        <table id="all-movies-table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Copies Available</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in all_movies %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.in_stock }}</td>
+                    <td><button onclick="submitRental('rent', {{ user_id|default:'null' }}, {{ movie.id }})">Rent</button></td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No movies available at the moment.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="error-message"></div>
+        
+    </div>
+</body>
+</html>
