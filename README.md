@@ -105,3 +105,6 @@ The application provides the following functionalities:
 - **Movie**: Represents a movie with fields for title and in-stock quantity.
 - **Checkout**: Represents a rental transaction linking a user and a movie.
 
+## Contributing
+Contributions to the Elixir project are welcome. Please feel free to fork the repository and submit pull requests.
+
