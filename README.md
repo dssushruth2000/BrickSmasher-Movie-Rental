@@ -2,6 +2,12 @@
 
 BrickSmasher is a Django-based movie rental management system designed to revive the nostalgia of renting movies on VHS tapes. This software helps store employees manage the rental experience, including account creation, managing movie stock, and renting/returning movies.
 
+
+<p align="center">
+  <img src="BrickSmasher-Movie-Rental.png" alt="Weather App Screenshot">
+</p>
+
+
 ## Table of Contents
 
 - [Installation](#installation)
